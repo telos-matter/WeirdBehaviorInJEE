@@ -26,7 +26,6 @@ public class Filter extends HttpFilter {
 		HttpServletResponse response = (HttpServletResponse) servletResponse;
 		final String path = request.getRequestURI().replaceFirst(request.getContextPath(), "");
 		
-		WriteToFile.write("In filter with path `" +path +"`");
 		System.out.println("In filter with path `" +path +"`");
 		PartTest.testPart(request);
 		
@@ -36,7 +35,6 @@ public class Filter extends HttpFilter {
 //		request.getRequestDispatcher("/servB").forward(request, response);
 //		request.getRequestDispatcher("/servC").forward(request, response);
 		
-		WriteToFile.write("Out filter");
 		System.out.println("Out filter");
 	}
 
